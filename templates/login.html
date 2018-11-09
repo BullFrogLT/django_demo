@@ -1,0 +1,96 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{% block title %}登录{% endblock %}</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="{% static 'bootstrap-3.3.7-dist/css/bootstrap.min.css' %}">
+
+    {% block css %}{% endblock %}
+    <style>
+        html, body{
+            height: 100%;
+        }
+
+        .container{
+            display:table;
+            height:100%;
+        }
+
+        /* centered columns styles */
+        .row-centered {
+            text-align:center;
+        }
+        .col-centered {
+            display:inline-block;
+            float:none;
+            text-align:left;
+            margin-right:-4px;
+        }
+        
+        .form-group {
+            text-align: left;
+        }
+
+        #aaa {
+            position: relative;
+            top: 50%;
+            {#transform: translateY(-50%);#}
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container-fluid" style="height: 95%;">
+        <div class="row" style="height:100%">
+            <div class="col-lg-6 text-center" style="background:#eaeaea;height:100%">aaa
+
+            </div>
+            <div  class="col-lg-6 text-center" style="height:100%">
+                <div class="center-block" style="height: 40%; width: 40%;" id="aaa">
+                    <form action="/login/" method="post">
+                        <div class="form-group">
+                            <label>用户名：</label>
+                            <input type="text" class="form-control" placeholder="用户名">
+                        </div>
+                        <div class="form-group">
+                            <label>密码：</label>
+                            <input type="password" class="form-control" placeholder="••••••••••••••••••••••••">
+                        </div>
+                        <div class="form-group">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" >Check me out
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-default">登录</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="modal-footer" style="height:5%;">
+        <h1>sdf</h1>
+    </div>
+
+<!-- jQuery 2.2.3 -->
+{#<script src="{% static 'plugins/jQuery/jquery-2.2.3.min.js' %}"></script>#}
+<!-- jQuery UI 1.11.4 -->
+{#<script src="{% static 'plugins/jQueryUI/jquery-ui.min.js' %}"></script>#}
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+
+<!-- Bootstrap 3.3.6 -->
+{#<script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>#}
+
+{% block script %}{% endblock %}
+</body>
+
+</html>
